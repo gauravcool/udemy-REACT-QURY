@@ -10,4 +10,10 @@
 ### Call useQuery
 #### -  Hook that queries the server
 
+### isFetching
+#### -  the async query function hasn't yet resolved
+
+### isLoading
+#### -  no cached data, plus isFetching
+
 Code to support the Udemy course [React Query: Server State Management in React](https://www.udemy.com/course/learn-react-query/?couponCode=REACT-QUERY-GITHUB)
