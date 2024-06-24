@@ -6,7 +6,8 @@ const queryClient = new QueryClient();
 
 function App() {
   return (
-    // React Query client on App
+    // Created a QueryClientProvider and provided queryClient
+    // which would be available to all its descendants
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <h1>Blog &apos;em Ipsum</h1>
