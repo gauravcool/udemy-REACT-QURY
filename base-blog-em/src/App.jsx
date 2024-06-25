@@ -8,7 +8,7 @@ const queryClient = new QueryClient();
 function App() {
   return (
     // Created a QueryClientProvider and provided queryClient
-    // which would be available to all its descendants
+    // which makes cache and hook would be available to all its descendants
     <QueryClientProvider client={queryClient}>
       <div className="App">
         <h1>Blog &apos;em Ipsum</h1>

@@ -17,4 +17,10 @@
 #### -  no cached data, plus isFetching
 #### -  isLoading ia a subset of isFetching
 
+### base-lazy-days
+#### -  centralizing fetching indicator/error handling
+#### -  refetching data
+#### -  integrating with auth
+#### -  dependent queries
+
 Code to support the Udemy course [React Query: Server State Management in React](https://www.udemy.com/course/learn-react-query/?couponCode=REACT-QUERY-GITHUB)
