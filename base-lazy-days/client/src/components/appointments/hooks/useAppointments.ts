@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { useState } from "react";
-
+import {useQuery} from '@tanstack/react-query';
 import { AppointmentDateMap } from "../types";
 import { getAvailableAppointments } from "../utils";
 import { getMonthYearDetails, getNewMonthYear } from "./monthYear";
@@ -61,7 +61,12 @@ export function useAppointments() {
   //
   //    2. The getAppointments query function needs monthYear.year and
   //       monthYear.month
-  const appointments: AppointmentDateMap = {};
+  const fallback: AppointmentDateMap = {};
+
+  const {data: appointments = fallback} = useQuery({
+    queryKey: [queryKeys.appointments, monthYear.year, monthYear.month],
+    queryFn: () => getAppointments(monthYear.year, monthYear.month)
+  });
 
   /** ****************** END 3: useQuery  ******************************* */
 
